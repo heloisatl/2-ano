@@ -1,14 +1,11 @@
-<?php 
+<?php
+$num1 = readline("Informe um número: ");
+$num2 = readline("\nInforme outro número: ");
+$resultado = 0;
 
-        print("Informe dois números para serem multiplicados\n");
-        
-        $num = readline("Número 1: ");
-        $num2 = readline("\nNúmero 2: ");
+for ($i = 0; $i < $num2; $i++) {
+    $resultado += $num1;
+}
 
-
-
-        for ($i=$num; $i >= $num ; $i--) { 
-            $resultado = $num * $num2;
-            echo $resultado;
-        }
-
+echo "O resultado da multiplicação de $num1 por $num2 é: $resultado";
+?>
