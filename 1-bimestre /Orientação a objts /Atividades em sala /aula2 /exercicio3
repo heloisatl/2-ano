@@ -1,0 +1,25 @@
+<?php
+
+    for ($i=0; $i <= 5 ; $i++) 
+    { 
+        sleep(3);
+        $nome = readline("\n\n*************************************\nInforme seu nome: ");
+        $altura = readline("\nInforme sua altura em metros: ");
+        $peso = readline("\nInforme seu peso: ");
+        
+        $imc = $peso / ( $altura * $altura);
+        echo "\n" . $nome . " tem peso " . $peso . " altura ". $altura . " e IMC " . $imc . ".";
+            /*
+                "echo "\n" . $ $nome[...]
+                ouu{
+                printf("%s tem peso %dkg, altura %fm e IMC %.2f "\n" ,
+                $nome, $peso, $altura, $imc);
+                }
+
+                %.2f = numero com apenas duas casa decimais
+                string = %s
+                int = %d
+                float = %f
+            
+            */
+    }
