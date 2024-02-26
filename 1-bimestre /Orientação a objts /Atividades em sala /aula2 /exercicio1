@@ -1,0 +1,13 @@
+<?php
+
+for ($i=0; $i <=10 ; $i++) { 
+
+    $num = 0;    
+    $num = readline("Digite um numero\n");
+    
+    if($num >= 0)
+        echo "O número é positivo\n";
+    else 
+    echo "O número é negativo\n";
+}
+
