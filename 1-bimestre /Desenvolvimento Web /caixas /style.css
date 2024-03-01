@@ -1,0 +1,68 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+
+
+body {
+    background: #164863;
+    color:rgb(248, 251, 253); /*cor da fonte (letra)*/
+}
+
+div {
+
+    background: #9BBEC8;
+    margin:20px;
+    padding:40px;
+    border: solid 0.7px rgb(79, 110, 122);
+    border-radius: 5px;
+}
+
+.caixa-menor {
+    background:#93a2be;
+    width:40%;
+    border: white;
+}
+
+.conteiner{
+    margin: 20px, 10px, 5px, 5px;
+    width: 1120px;
+    min-height: 400px;
+    padding: 0;
+    overflow: auto;
+    margin: 20px auto;
+}
+
+.esconder {
+
+    display:none;
+
+}
+
+.bloco {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+
+}
+
+.b1{
+    background: cadetblue;
+    float: left;
+    width: 50%;
+
+}
+.b2{
+    background: rgb(51, 94, 95);
+    float: left;
+    width: 50%;
+}
+.b3{
+    background: rgb(193, 220, 221);
+    float: left;
+}
+.b4{
+    background: rgb(7, 48, 49);
+    float: left;
+}
