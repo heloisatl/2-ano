@@ -1,0 +1,21 @@
+1-
+
+a)
+    informe a nota 1:10
+    Informe a nota 2:4
+
+
+    Saída: "Aprovado - Média: 7" ; 
+
+b)
+    350;
+    150;
+    ==2;
+
+    Saída: "Reprovado - Média 5" ;
+
+
+2-
+"Júlio - 25";
+"Maria - 32";
+
