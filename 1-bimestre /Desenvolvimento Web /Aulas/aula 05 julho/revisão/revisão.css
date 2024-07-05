@@ -10,3 +10,19 @@ b{
     width: 100px;
     background-color: red;
 }
+header{
+    background:red;
+    padding:10px 0px;
+    height:100px;
+}
+
+main{
+    background: blue;
+    height:calc(100vh - 60px);  /*100% o tamanho da tela*/
+}
+
+footer{
+    background: green;
+    padding:10px 0px;
+    height:60px;
+}
