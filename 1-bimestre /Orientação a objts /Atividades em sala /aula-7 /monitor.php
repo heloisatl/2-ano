@@ -18,7 +18,7 @@ class Monitor {
         echo "Computador mostrando imagem com a resolução ". $this->resolucao . " XX!\n";
     }
 }
-/*function ligar(){
+/*function ligar(){ 
     echo "Computador ligado!";
 }
 ----Dentro de uma classe uma função vira MÉTODOS, fora da classe ela é FUNÇÃO---*/
