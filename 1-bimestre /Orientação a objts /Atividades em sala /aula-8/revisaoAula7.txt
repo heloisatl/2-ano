@@ -1,0 +1,26 @@
+classe - entidades
+    animal;
+    material;
+    jogo;
+
+atributos - caracteristicas
+
+metodos- acoes
+******************************************************
+
+Mochila (nome){
+
+cor, marca, qtd bolsos, (atributos)
+
+abrir, armazenar, fechar, (metodos)
+}
+"a partir da classe podemos criar objetos que terao os mesmos metodos e os mesmos atributos da classe, o que muda sao os valores dos atributos e dos metodos"
+******************************************************
+
+Tem que saber:
+
+Abstração = decidir quais informacoes sao ou nao importantes pro codigo
+Classe =
+Atributo= 
+Metodo=
+Objeto= são as instancias das classes
