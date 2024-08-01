@@ -1,0 +1,66 @@
+<<?php 
+
+    class Pokemon{
+        //Atributos: características
+        public $nome;
+        public $tipo;
+
+        /*
+        public $ataque;
+        public $defesa;
+        public $velocidade;*/
+        
+        public $nivel;
+        public $pontosVida;
+        public $experiencia;
+
+        //Construtor
+        function __contruct() {
+            $this->nivel =1;
+            $this->pontosVida = 1;
+            $this->experiencia = 0;
+        }
+
+
+        //Métodos: ações
+        function batalhar(){
+            $this->aumentarExperiencia(5);
+        }
+
+        function aumentarNivel(){
+            $this->nivel = $this->nivel +1;
+            $this->aumentarPontoVida();
+            $this->experiencia = 0;
+        }
+
+        function aumentarPontoVida(){
+            $this->pontosVida = $this->nivel *10;
+        }
+
+        function aumentarExperiencia($exp){
+            $this->experiencia += $exp;
+            if($this->experiencia >=100)
+            $this->aumentarNivel();
+        }
+    }//FINAL CLASSE POKEMON
+
+    //Programa principal
+    $psyduck = new Pokemon();
+    $psyduck->nome = "Psyduck";
+    $psyduck->tipo = "Aquático";
+    $psyduck->nivel = 1;
+    $psyduck->pontosVida = 10;
+    $psyduck->experiencia = 0;
+    //print_r($psyduck);   
+    
+    
+    $lucario = new Pokemon();
+    $lucario->nome = "Lucario";
+    $lucario->tipo = "Lutador";
+    $lucario->nivel = 1;
+    $lucario->pontosVida = 10;
+    $lucario->experiencia = 0;
+    print_r($lucario);
+
+
+?>
