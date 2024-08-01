@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 
     class Pokemon{
         //Atributos: características
@@ -9,13 +9,14 @@
         public $ataque;
         public $defesa;
         public $velocidade;*/
-        
+
         public $nivel;
         public $pontosVida;
         public $experiencia;
+        public $qtd;
 
         //Construtor
-        function __contruct() {
+        function __construct() {
             $this->nivel =1;
             $this->pontosVida = 1;
             $this->experiencia = 0;
@@ -31,27 +32,43 @@
             $this->nivel = $this->nivel +1;
             $this->aumentarPontoVida();
             $this->experiencia = 0;
+            
         }
 
         function aumentarPontoVida(){
             $this->pontosVida = $this->nivel *10;
+        
         }
 
         function aumentarExperiencia($exp){
             $this->experiencia += $exp;
             if($this->experiencia >=100)
             $this->aumentarNivel();
+            
+        }
+        function dados(){
+            echo "Nome => " . $this->nome . "\n";
+            echo "Tipo => " .$this->tipo . "\n";            
+            echo "Nível => " . $this->nivel . "\n";
+            echo "Pontos de Vida => " . $this->pontosVida . "\n";
+            echo "Experiência =>" . $this->experiencia . "\n";
         }
     }//FINAL CLASSE POKEMON
-
     //Programa principal
-    $psyduck = new Pokemon();
-    $psyduck->nome = "Psyduck";
-    $psyduck->tipo = "Aquático";
-    $psyduck->nivel = 1;
-    $psyduck->pontosVida = 10;
-    $psyduck->experiencia = 0;
-    //print_r($psyduck);   
+    $pokemon = new Pokemon();
+    $pokemon->nome = readline("Fale o nome do Pokemón: \n");
+    $pokemon->tipo = readline("Qual o tipo do Pokemón? \n");
+    $pokemon->nivel = 1;
+    $pokemon->pontosVida = 10;
+    $pokemon->experiencia = 0;
+    $pokemon->qtd = readline("Quantas vezes deseja fazer seu Pokemón batalhar? \n");
+    $pokemon->dados();
+
+    for ($i=0; $i <= 0; $i++) { 
+        $pokemon->batalhar();
+    }
+
+    //print_r($pokemon);   
     
     
     $lucario = new Pokemon();
@@ -60,7 +77,7 @@
     $lucario->nivel = 1;
     $lucario->pontosVida = 10;
     $lucario->experiencia = 0;
-    print_r($lucario);
+    //print_r($lucario);
 
 
 ?>
