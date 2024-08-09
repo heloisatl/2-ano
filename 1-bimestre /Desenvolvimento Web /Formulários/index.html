@@ -1,61 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+    
+    <!-- Include Editor style. -->
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href = "default.css">
-
+    
 </head>
 
-    <h1>Formulários</h1>
 
-    <h2>Elemento input</h2>
+<body>
 
-    <form action = "#">
+    <h1>Formulário</h1>
+    <h2>Elemento Input</h2>
+
+    <form action="#">
 
         <div>
-            <label for="campo_nome">nome:</label>
-            <input type="text" id="campo_nome" name= "campo_nome">
+            <label for="campo_nome">Nome:</label>
+            <input type="text" id="campo_nome" name="campo_nome" value="">
         </div>
 
         <div>
-            <label for="campo_cor">cor:</label>
-            <input type="color" id="campo_nome" name= "campo_nome">
-        </div>        
-        
-        <div>
-            <label for="campo_arquivo">arquivo:</label>
-            <input type="file" id="campo_nome" name= "campo_nome">
+            <label for="campo_idade">Idade:</label>
+            <input type="number" id="campo_idade" name="campo_idade" min="1" max="100">
         </div>
 
         <div>
-            <label for="campo_idade">idade:</label>
-            <input type="number" id="campo_idade" name="campo_idade" min="0" max="130" >
+            <label for="campo_cor">Cor:</label>
+            <input type="color" name="campo_cor" id="campo_cor">
         </div>
 
         <div>
+            <label for="campo_arquivo">Arquivo</label>
+            <input type="file" name="campo_arquivo" id="campo_arquivo">
+        </div>
+
+        <label for="">
+            <input type="radio" name="campo_turno" value="Manhã"> Manhã
+        </label>
+
+        <label for="">
+
+            <input type="radio" name="campo_turno" value="Tarde"> Tarde
+
             <label for="">
-                <input type = "radio"name = "campo_turno" value="manhã">
-                manhã
-            </label> 
-
-
-            <label for="">
-            <input type = "radio"name = "campo_turno" value="tarde">
-            tarde
+                <input type="radio" name="campo_turno" value="Noite"> Noite
             </label>
 
-            <label for="">
-            <input type = "radio"name = "campo_turno" value="noite">
-            noite
+        </label>
+
+        <div>
+
+            <label for="id_prato">
+                Prato Principal <input type="checkbox" value="prato_principal" id="id_prato" name="Prato" checked>
+            </label>
+
+            <label for="id_salada">
+                Salada <input type="checkbox" value="salad" id="id_salada" name="Salada" >
+            </label>
+
+            <label for="id_sobremesa">
+                Sobremesa <input type="checkbox" value="sobremesa" id="id_sobremesa" name="Sobremesa">
             </label>
 
         </div>
 
-        <input type="submit">
+        <div>
+            <select name="cor_favorita" id="cor-favorita" required >
+
+                <option value="">
+                    Selecione uma Opção
+                </option>
+
+                <option value="Verde">
+                    Verde
+                </option>
+
+                <option value="Vermelho">
+                    Vermelho
+                </option>
+
+                <option value="Azul">
+                    Azul
+                </option>
+
+            </select>
+        </div>
+
+        <div>
+
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        </div>
+
+        <div>
+            <input type="submit" "> 
+        </div>
+
     </form>
 
+    <script>
+        new FroalaEditor('textarea');
+      </script>
+
+</body>
+</html>
+    
 </body>
 </html>
