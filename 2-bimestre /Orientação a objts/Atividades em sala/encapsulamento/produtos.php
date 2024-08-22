@@ -78,7 +78,6 @@ $prod1->setDescricao(readline("\nFale a descrição do produto:\n "));
 $prod1->setUnidadeMedida(readline("\nQual a unidade de medida?\n "));
 $prod1->setQuantidade(readline("\nQual a quantidade? \n"));
 $prod1->setValorUnitario(readline("\nQual o valor unitário?\n"));
-$prod1->getvalorTotal();
 $prod1->getMessage();
 
 
@@ -88,7 +87,6 @@ $prod2->setDescricao(readline("\nFale a descrição do produto2:\n "));
 $prod2->setUnidadeMedida(readline("\nQual a unidade de medida?\n"));
 $prod2->setQuantidade(readline("\nQual a quantidade?\n"));
 $prod2->setValorUnitario(readline("\nQual o valor unitário?\n"));
-$prod2->getvalorTotal();
 $prod2->getMessage();
 
 
@@ -97,20 +95,19 @@ $prod3->setDescricao(readline("\nFale a descrição do produto3: \n"));
 $prod3->setUnidadeMedida(readline("\nQual a unidade de medida?\n"));
 $prod3->setQuantidade(readline("\nQual a quantidade?\n"));
 $prod3->setValorUnitario(readline("\nQual o valor unitário?\n"));
-$prod3->getvalorTotal();
 $prod3->getMessage();
 
 
 if($prod1->getValorTotal()> $prod2->getValorTotal()){
     if($prod1->getValorTotal()>$prod3->getValorTotal()){
-        echo "\nVenda com maior valor total do produto1: " . $prod1->getDescricao() . " ". $prod1->getUnidadeMedida();
+        echo "\nVenda com maior valor total do produto1: " . $prod1->getDescricao() . " ". $prod1->getUnidadeMedida() . "\n\n\n";
     }
     else{
         if($prod2->getValorTotal()>$prod3->getValorTotal()){
-            echo "\nVenda com maior valor total do produto2: " . $prod2->getDescricao() . " ". $prod2->getUnidadeMedida();
+            echo "\nVenda com maior valor total do produto2: " . $prod2->getDescricao() . " ". $prod2->getUnidadeMedida() . "\n\n\n";
         }
         else{
-            echo "\nVenda com maior valor total do produto3: " . $prod3->getDescricao() . " ". $prod3->getUnidadeMedida();
+            echo "\nVenda com maior valor total do produto3: " . $prod3->getDescricao() . " ". $prod3->getUnidadeMedida() . "\n\n\n";
         }
     }
 }
