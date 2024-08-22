@@ -1,13 +1,15 @@
 <?php
 
-class Produto{
+class Produto
+{
     private string $descricao;
     private string $unidadeMedida;
     private int $quantidade;
     private float $valorUnitario;
     private float $valorTotal;
 
-    public function getvalorTotal():float{
+    public function getvalorTotal(): float
+    {
 
         return $this->quantidade * $this->valorUnitario;
     }
@@ -66,10 +68,11 @@ class Produto{
         return $this;
     }
 
-    public function getMessage(){
+    public function getMessage()
+    {
         echo "Produto " . $this->getDescricao() . " (" .  $this->getUnidadeMedida() . ")  |  " . $this->getQuantidade() . " X " . $this->getValorUnitario() . " = " . $this->getvalorTotal() . "\n\n\n";
     }
-}//Fim da classe Produto
+} //Fim da classe Produto
 
 //Programa Principal
 
@@ -98,20 +101,13 @@ $prod3->setValorUnitario(readline("\nQual o valor unitário?\n"));
 $prod3->getMessage();
 
 
-if($prod1->getValorTotal()> $prod2->getValorTotal()){
-    if($prod1->getValorTotal()>$prod3->getValorTotal()){
-        echo "\nVenda com maior valor total do produto1: " . $prod1->getDescricao() . " ". $prod1->getUnidadeMedida() . "\n\n\n";
-    }
-    else{
-        if($prod2->getValorTotal()>$prod3->getValorTotal()){
-            echo "\nVenda com maior valor total do produto2: " . $prod2->getDescricao() . " ". $prod2->getUnidadeMedida() . "\n\n\n";
-        }
-        else{
-            echo "\nVenda com maior valor total do produto3: " . $prod3->getDescricao() . " ". $prod3->getUnidadeMedida() . "\n\n\n";
-        }
+if ($prod1->getValorTotal() > $prod2->getValorTotal() && $prod1->getValorTotal() > $prod3->getValorTotal()) {
+
+    echo "\nVenda com maior valor total do produto1: " . $prod1->getDescricao() . " " . $prod1->getUnidadeMedida() . "\n\n\n";
+} else {
+    if ($prod2->getValorTotal() > $prod3->getValorTotal()) {
+        echo "\nVenda com maior valor total do produto2: " . $prod2->getDescricao() . " " . $prod2->getUnidadeMedida() . "\n\n\n";
+    } else {
+        echo "\nVenda com maior valor total do produto3: " . $prod3->getDescricao() . " " . $prod3->getUnidadeMedida() . "\n\n\n";
     }
 }
-
-
-
-
