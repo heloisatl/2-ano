@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Media Querry</title>
+
+    <style>
+        body {
+            background-color: beige;
+            font-family: Oswald;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: rgb(124, 0, 0);
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+       /* .img {
+
+        } */
+
+        .img-pequena {
+            display: none;
+        }
+
+        /* Resolução para tela até 500px*/
+
+        @media screen and (min-width: 500px) {
+
+            body {
+                background-color: rgb(55, 107, 123);
+                color: floralwhite;
+            }
+
+
+            h1 {
+                font-size: 50px;
+                color: rgb(11, 0, 58);
+            }
+
+            .img-pequena {
+                display: block;
+            }
+
+            .img-grande {
+                display: none;
+            }
+
+        }
+
+        /* Especifico par Tablets */
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+            body {
+                background-color: rgb(114, 0, 0);
+                color: floralwhite;
+            }
+
+
+            h1 {
+                font-size: 50px;
+                color: rgb(248, 142, 142);
+            }
+
+        }
+
+        /* Especifico par Tablets */
+
+        @media screen and (max-width: 767px) {
+
+            body {
+                background-color: rgb(255, 209, 238);
+                color: floralwhite;
+            }
+
+
+            h1 {
+                font-size: 50px;
+                color: rgb(119, 0, 77);
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Media Queries </h1>
+
+    <div class="img img-grande">
+        <img src="https://placehold.co/1000x400" alt="">
+    </div>
+
+    <div class="img img-pequena">
+        <img src="https://placehold.co/500x400" alt="">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae similique debitis, quas quaerat cum ab assumenda.
+        Sed distinctio est animi, impedit ea, quas nobis, perspiciatis suscipit in mollitia eaque ullam.</p>
+
+</body>
+
+</html>
