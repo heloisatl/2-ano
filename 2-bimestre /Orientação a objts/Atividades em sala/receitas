@@ -1,0 +1,169 @@
+<?php
+
+class Receita{
+
+    private $descricao;
+    private $valor;
+
+    public function __toString(){
+        $dados = $this->getDescricao() . "-" . $this->getValor();
+        return $dados;
+    }
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+
+    public function setDescricao($descricao): self
+    {
+        $this->descricao = $descricao;
+
+        return $this;
+    }
+
+    public function getValor()
+    {
+        return $this->valor;
+    }
+
+    public function setValor($valor): self
+    {
+        $this->valor = $valor;
+
+        return $this;
+    }
+}
+
+
+
+class Despesa{
+    private $descricaoDespesa;
+    private $valorDespesa;
+
+
+    public function __toString(){
+        $dados = $this->getDescricaoDespesa() . "-" . $this->getValorDespesa() . "\n";
+        return $dados;
+    }
+
+    public function getDescricao()
+    {
+        return $this->descricaoDespesa;
+    }
+
+    public function setDescricao($descricaoDespesa): self
+    {
+        $this->descricaoDespesa = $descricaoDespesa;
+
+        return $this;
+    }
+
+    public function getValor()
+    {
+        return $this->valorDespesa;
+    }
+
+    public function setValor($valorDespesa): self
+    {
+        $this->valorDespesa = $valorDespesa;
+
+        return $this;
+    }
+
+    public function getDescricaoDespesa()
+    {
+        return $this->descricaoDespesa;
+    }
+
+    public function setDescricaoDespesa($descricaoDespesa): self
+    {
+        $this->descricaoDespesa = $descricaoDespesa;
+
+        return $this;
+    }
+
+    public function getValorDespesa()
+    {
+        return $this->valorDespesa;
+    }
+
+    public function setValorDespesa($valorDespesa): self
+    {
+        $this->valorDespesa = $valorDespesa;
+
+        return $this;
+    }
+}
+
+//Programa Principal:
+$arrayreceitas = array();
+$arraydespesas = array();
+
+    do {
+        echo"\n\n****Menu****\n1-Adicionar receita \n2-Adicionar despesa \n3-Listar receita \n4-Listar despesa \n5-Sumarizar\n0-SAIR\n";
+        $resp = readline("Escolha uma opção: ");
+    
+    
+    switch($resp){
+        case '1':
+        $receita = new Receita; 
+        $receita->setDescricao(readline("Qual a descrição da receita?"));
+        $receita->setValor(readline("Qual o valor da receita?"));
+        echo"\nReceita adicionada.\n";
+        array_push($arrayreceitas, $receita);
+        break;
+        
+        case '2':
+        $despesa = new Despesa; 
+        $despesa->setDescricaoDespesa(readline("Qual a descrição da despesa?"));
+        $despesa->setValorDespesa(readline("Qual o valor da despesa?"));
+        echo("\nDespesa adicionada.");
+        array_push($arraydespesas, $despesa);
+        break;
+
+        case '3':
+            foreach ($arrayreceitas as $r) {
+                echo $r;
+            }
+            break;
+        case '4':
+            foreach ($arraydespesas as $d) {
+                echo $d;
+            }
+            break;
+        case '5':
+            $TotalReceitas = 0;
+            $TotalDespesas = 0;
+            $SaldoTotal = 0;
+
+            foreach ($arrayreceitas as $r) {
+                $TotalReceitas = $TotalReceitas + $r->getValor();
+            }
+            foreach ($arraydespesas as $d) {
+                $TotalDespesas = $TotalDespesas + $d->getValorDespesa();
+            }
+
+            $SaldoTotal= $TotalReceitas - $TotalDespesas;
+
+            echo "\n\nSaldo: R$ " . $SaldoTotal . "\n";
+            echo "Total Receitas: R$ " . $TotalReceitas . "\n";    
+            echo "Total Despesas: R$ " . $TotalDespesas . "\n\n"; 
+
+            break;
+
+        default:
+            break;
+        }
+    }while ($resp != 0);
+
+
+
+
+$receita->getDescricao(readline("Qual é a descrição da receita?"));
+$receita->getValor(readline("Qual é o valor da receita?"));
+
+
+
+
+
+//percorrer o arrayy de cada um e listar o valor de cada var. Depois percorrer os arrays e somar os valores de todos os valores de receitas e despesas cadastrados no PROGRAMA PRINCIPAL resultando no saldo.
