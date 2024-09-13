@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="sylesheet" href="default.css">
+
+    <style>
+        .flex-container{
+            display:flex;
+            /* tenta deixar tudo na mesma linha */
+
+            flex-wrap:wrap;
+            /* wrap serve para quebrar uma linha */
+        }
+        .flex-container div{
+            flex: 1;
+            /* esse 1 é uma fração do espaço disponível */
+        }
+
+        .flex-container .red{
+            flex: 5;
+            /* o padrao de cada div é ter tamanho um, porem a fração red agora ocupa 5 vezes a fração */
+        }
+
+        .flex-container .yellow{
+            order:1;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <h1>FlexBox</h1>
+
+    <h2>Flex container</h2>
+
+    <div class="flex-container">
+        <div class="red">red</div>
+        <div class="green">green</div>
+        <div class="blue">blue</div>
+        <div class="yellow">yellow</div>
+    </div>
+    
+</body>
+</html>
