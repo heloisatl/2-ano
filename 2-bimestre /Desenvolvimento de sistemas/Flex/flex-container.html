@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="sylesheet" href="default.css">
+
+    <style>
+        .flex-container{
+            display:flex;
+            /* tenta deixar tudo na mesma linha */
+        }
+
+        .flex-direction-column{
+            flex-direction:column;
+            /* tenta deixar tudo na mesma coluna */
+        }
+        .flex-direction-row-reverse{
+            flex-direction: row-reverse;
+        }
+        .flex-direction-column-reverse{
+            flex-direction: column-reverse;
+        }
+    </style>
+
 </head>
 <body>
     
@@ -12,24 +32,37 @@
 
     <h2>Flex container</h2>
 
-    <div class="container">
-        <div class="red">
-            red
-        </div>
-
-        <div class="green">
-            green
-        </div>
-
-        <div class="blue">
-            blue
-        </div>
-        
-        <div class="yellow">
-            yellow
-        </div>
+    <div class="flex-container">
+        <div class="red">red</div>
+        <div class="green">green</div>
+        <div class="blue">blue</div>
+        <div class="yellow">yellow</div>
     </div>
 
+    <h2>Flex direction Column</h2>
+
+    <div class="flex-container flex-direction-column">
+        <div class="red">red</div>
+        <div class="green">green</div>
+        <div class="blue">blue</div>
+        <div class="yellow">yellow</div>
+    </div>
+
+    <h2>Flex direction Row Rever e Column Reverse</h2>
+
+    <div class="flex-container flex-direction-row-reverse">
+        <div class="red">red</div>
+        <div class="green">green</div>
+        <div class="blue">blue</div>
+        <div class="yellow">yellow</div>
+    </div>
+
+    <div class="flex-container flex-direction-column-reverse">
+        <div class="red">red</div>
+        <div class="green">green</div>
+        <div class="blue">blue</div>
+        <div class="yellow">yellow</div>
+    </div>
     
 </body>
 </html>
