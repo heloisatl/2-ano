@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafo e botão</title>
+</head>
+<body>
+    <!-- EXERCÍCIO 1 -->
+    <p id="paragrafo">??</p>
+
+    <!-- EXERCÍCIO 2 -->
+    <p class="caixa">caixa1</p>
+    <p class="caixa">caixa2</p>
+    <p class="caixa">caixa3</p>
+
+    <!-- EXERCÍCIO 3 -->
+    <div class="container">
+        <p class="tagname"> 0</p>
+        <p class="tagname"> 1</p>
+        <p class="tagname"> 2</p>
+        <p class="tagname"> 3</p>
+        <p class="tagname"> 4</p>
+    </div>
+
+
+    <!-- EXERCÍCIO 4 -->
+    <ul>
+        <li class="classelista">lista</li>
+        <li class="classelista">lista</li>
+        <li class="classelista">lista</li>
+        <li class="classelista">lista</li>
+        <li class="classelista">lista</li>
+    </ul>
+
+    <!-- EXERCÍCIO 5 -->
+
+    
+    <script>
+        let p = document.getElementById('paragrafo')
+        //p tem todas as ifnroamções desse elemento
+        p.innerText = "Olá mundo"
+        p.style.fontSize = '50px'
+
+        let c = document.getElementsByClassName('caixa')
+        c[0].style.backgroundColor = 'blue'
+        c[1].style.backgroundColor = 'blue'
+        c[2].style.backgroundColor = 'blue'
+
+        let container = document.querySelector(".container")
+        let t = container.getElementsByTagName('p')
+        t[3].innerText = "AAAAAAAA"
+
+        let l = document.querySelector("li")
+        l.style.color = 'red'
+
+    </script>
+
+
+</body>
+</html>
