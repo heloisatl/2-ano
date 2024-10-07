@@ -70,3 +70,6 @@ codprod int primary key,
 nome varchar(30),
 valor float
 );
+
+--drop table  tablename serve pra escluir tabela; drop database databasename apaga a database--
+drop database oii;
