@@ -8,16 +8,18 @@ class Industrial implements IConsumidorEnergia{
 
     
     //Método
-    public function getValorFatura(){
-        if($this->consumo>100 && $this->consumo<500 ){
-            $this->consumo = $this->consumo * 1.80;
-        } else if($this->consumo>500){
-            $this->consumo = $this->consumo * 2.30;
+    public function getValorFatura() {
+        if ($this->consumo > 100 && $this->consumo < 500) {
+            $valor = $this->consumo * 1.80;
+        } else if ($this->consumo >= 500) {
+            $valor = $this->consumo * 2.30;
         }
-        echo "O valor do consumo é de R$: " . $this->consumo . "\n";
-        return $this->consumo;
+        return $valor;
     }
 
+    public function __toString() {
+        return "O valor do consumo industrial é de R$: " . $this->getValorFatura() . "\n";
+    }
     /**
      * Get the value of consumo
      */
