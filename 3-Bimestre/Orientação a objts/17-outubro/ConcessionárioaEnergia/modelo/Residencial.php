@@ -9,10 +9,13 @@ class Residencial implements IConsumidorEnergia{
     
     //Método
 
-    public function getValorFatura(){
-        $consumo = $this->consumo * 1.05;
-        
-        return $consumo;
+    public function getValorFatura() {
+        $valor = $this->consumo * 1.50;
+        return $valor;
+    }
+
+    public function __toString() {
+        return "O valor do consumo residencial é de R$: " . $this->getValorFatura() . "\n";
     }
 
     //Gets e Sets
