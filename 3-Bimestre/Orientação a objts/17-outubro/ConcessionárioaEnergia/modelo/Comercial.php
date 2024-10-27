@@ -8,14 +8,17 @@ class Comercial implements IConsumidorEnergia{
 
     
     //Método
-    public function getValorFatura(){
-        if($this->consumo<100){
-            $this->consumo = $this->consumo * 1.45;
-        } else if($this->consumo>100){
-            $this->consumo = $this->consumo * 1.60;
+    public function getValorFatura() {
+        if ($this->consumo < 100) {
+            $valor = $this->consumo * 1.45;
+        } else {
+            $valor = $this->consumo * 1.60;
         }
-        echo "O valor do consumo é de R$: " . $this->consumo . "\n";
-        return $this->consumo;
+        return $valor;
+    }
+
+    public function __toString() {
+        return "O valor do consumo comercial é de R$: " . $this->getValorFatura() . "\n";
     }
 
     /**
