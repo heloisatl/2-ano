@@ -1,0 +1,19 @@
+create database aula;
+show databases;
+use aula;
+
+create table medicomedico(
+codMed int primary key,
+nomeMed varchar(40) not null,
+dataNasc date not null,
+cpf char(11),
+cidade varchar(30) not null,
+especialidade varchar(30) not null
+);
+
+create table paciente(
+codpaciente int primary key,
+nomepac varchar(40) not null,
+dataNasc date not null,
+cpg char(11),
+cidade varchar(30) not null);
