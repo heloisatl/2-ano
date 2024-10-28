@@ -14,7 +14,7 @@ create table paciente(
 codpaciente int primary key,
 nomepac varchar(40) not null,
 dataNasc date not null,
-cpg char(11),
+cpf char(11),
 cidade varchar(30) not null);
 
 
