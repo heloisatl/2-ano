@@ -1,0 +1,75 @@
+create database aula;
+show databases;
+use aula;
+
+create table medico(
+codMed int primary key,
+nomeMed varchar(40) not null,
+dataNasc date not null,
+cpf char(11),
+cidade varchar(30) not null,
+especialidade varchar(30) not null
+);
+
+create table paciente(
+codpaciente int primary key,
+nomepac varchar(40) not null,
+dataNasc date not null,
+cpg char(11),
+cidade varchar(30) not null);
+
+
+
+show databases;
+create table consulta(
+codMed int not null,
+codpaciente int not null,
+data_consulta date not null,
+hora time not null,
+primary key(codMed, codpaciente),
+foreign key(codMed) references medico(codMed),
+foreign key(codpaciente) references paciente(codpaciente)
+);
+
+
+create table professor(
+cod_prof int primary key,
+dataNasc date not null,
+cpf char(11),
+area varchar(20),
+nomeProfessor varchar(40) not null
+);
+
+create table disciplina(
+cod_disc int primary key,
+ch char(10) not null,
+nome varchar(30) not null
+);
+
+create table ministra(
+cod_prof int not null,
+cod_disc int not null,
+ministra int not null,
+primary key(cod_prof, cod_disc),
+foreign key(cod_prof) references professor(cod_prof),
+foreign key(prof_disc) references discplina(cor_disc)
+);
+
+create database teste2;
+show databases;
+use teste2;
+create table cliente(
+codecli int primary key,
+nome varchar(40) not null,
+endereco varchar(40) not null,
+datanasc date not null
+);
+
+create table produto(
+codprod int primary key,
+nome varchar(30),
+valor float
+);
+
+--drop table  tablename serve pra escluir tabela; drop database databasename apaga a database--
+drop database oii;
