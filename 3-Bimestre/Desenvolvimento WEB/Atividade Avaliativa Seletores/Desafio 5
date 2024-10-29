@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+</head>
+<body>
+
+    <button>Adicione um novo elemento para a lista</button>
+
+    <h1>Personagens daoras</h1>
+
+    <li>Kick Buttowski</li>
+    <li>Mordecay</li>
+    <li>Rigby</li>
+
+    <script>
+
+        const botao = document.querySelector('button');
+
+        const lista = document.querySelector('li');
+
+
+
+        botao.addEventListener('click', function(){
+
+            const adiciona = document.createElement('li');
+
+            adiciona.textContent = 'George Russell';
+
+            lista.appendChild(adiciona);
+
+        });
+      
+    </script>
+    
+</body>
+</html>
