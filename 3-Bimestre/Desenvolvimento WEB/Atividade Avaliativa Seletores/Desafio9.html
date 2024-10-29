@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 8</title>
+</head>
+<body>
+
+    <button>Deixe o site no modo escuro</button>
+
+    <h2>Sorvetessss</h2>
+    <input type="text">
+    <p></p>
+
+  
+    <script>
+
+        const input = document.querySelector('input');
+        const texto = document.querySelector('p'); 
+
+        const botao = document.querySelector('button');
+
+        const titulo = document.querySelector('h2');
+
+      
+        input.addEventListener('keyup' , function (){
+
+            let textoDigitado = input.value;
+
+            if (textoDigitado == "Chocolate") {
+                texto.innerText = "Eu amo sorvete de chocolate"
+            }
+
+            else if (textoDigitado == "Flocos"){
+                texto.innerText = "Ahh, mas chocolate é o meu preferido..."
+            }
+
+            else {
+                texto.innerText = "Ahh, eu esperava um sabor de sorvete..."  
+            }
+        });
+
+        botao.addEventListener("click" , function(){
+
+            let mudarCor = '#000000'
+
+            let mudarTexto = '#FFFFFF'
+
+            document.body.style.backgroundColor = mudarCor;
+            
+            texto.style.color = mudarTexto;
+            titulo.style.color = mudarTexto;
+
+        });
+
+
+
+
+    </script>
+    
+</body>
+</html>
