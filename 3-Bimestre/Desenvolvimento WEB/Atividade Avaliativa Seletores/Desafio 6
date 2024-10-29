@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+</head>
+<body>
+    
+    <h1>Gerador de aventurassss!!!!!!</h1>
+
+    <button>Gerar nomes</button>
+
+    <p></p>
+
+    <script>
+
+        const botao = document.querySelector('button');
+        const texto = document.querySelector('p'); 
+
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+
+        botao.addEventListener('click', function(){
+
+            let n1 = parseInt(Math.random()*titles.length)
+
+            let n2 = parseInt(Math.random()*titles.length)
+
+            let n3 = parseInt(Math.random()*titles.length)
+
+            let n4 = parseInt(Math.random()*titles.length)
+
+            texto.innerText = titles[n1] + " " + names[n2] + " " + classes[n3] + " " + locations[n4];
+            
+            console.log(titles[n1], names[n2], classes[n3], locations[n4])
+        })
+
+
+    </script>
+</body>
+</html>
