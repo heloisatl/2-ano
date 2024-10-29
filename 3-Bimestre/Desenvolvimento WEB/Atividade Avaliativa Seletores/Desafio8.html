@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 8</title>
+</head>
+<body>
+
+    <h2>Sorvetessss</h2>
+    <input type="text">
+    <p></p>
+
+  
+    <script>
+
+        const input = document.querySelector('input');
+        const texto = document.querySelector('p'); 
+
+      
+        input.addEventListener('keyup' , function (){
+
+            let textoDigitado = input.value;
+
+            if (textoDigitado == "Chocolate") {
+                texto.innerText = "Eu amo sorvete de chocolate"
+            }
+
+            else if (textoDigitado == "Flocos"){
+                texto.innerText = "Ahh, mas chocolate é o meu preferido..."
+            }
+
+            else {
+                texto.innerText = "Ahh, eu esperava um sabor de sorvete..."  
+            }
+        });
+        
+
+
+
+    </script>
+    
+</body>
+</html>
