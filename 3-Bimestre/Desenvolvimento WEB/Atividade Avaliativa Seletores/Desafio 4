@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio  4</title>
+</head>
+<body>
+
+    <button>clique aqui</button>
+    <p></p>
+
+
+    <script>
+
+        let numeroCliques = 0;
+
+        const botao = document.querySelector('button');
+        const textos = document.querySelector('p'); 
+
+        botao.addEventListener('click', function(){
+           numeroCliques++;
+           textos.innerText = "Botão foi clicado: " + numeroCliques + " vezes";
+
+        });
+
+    </script>
+    
+</body>
+</html>
