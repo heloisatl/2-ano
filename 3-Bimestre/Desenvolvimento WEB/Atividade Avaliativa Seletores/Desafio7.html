@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+</head>
+<body>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+
+            min-width: 200px;
+            height: 600px;
+        }
+
+    </style>
+
+    <img src="https://static.wikia.nocookie.net/disney/images/d/dd/Waddles_the_Pig.jpg/revision/latest?cb=20160710192404&path-prefix=pt-br" alt="Foto do nosso querido Waddles">
+
+    <h2></h2>
+
+    <script>
+
+    const texto = document.querySelector('h2');
+
+    const imagem = document.querySelector('img');
+
+    imagem.addEventListener('mouseenter', function(){
+
+        texto.innerText = "Oxe. PQ TA ME CUTUCANDO??";
+
+        console.log(texto);
+    });
+
+    imagem.addEventListener('mouseleave', function(){
+
+    texto.innerText = "É bom parar mesmo!!";
+
+
+    });
+
+    imagem.addEventListener('mousemove', function(){
+
+    texto.innerText = "CHEGA!!";
+
+    });
+
+    imagem.addEventListener('click', function(){
+
+    texto.innerText = "OINC OINC ";
+
+    });
+
+
+
+    </script>
+    
+</body>
+</html>
