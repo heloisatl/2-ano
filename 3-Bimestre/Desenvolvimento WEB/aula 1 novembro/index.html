@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let turma = {
+            curso: 'TDS',
+            ano: 2,
+            estudantes: [
+                'Ana',
+                'Bia',
+                'Carla',
+
+            ]
+        }
+
+        // se eu nao souber oq tem dentro daq]uela variavel eu posso usar o console.log, tipo um print_r; botar o nome do objeto.variavel vai mostrar a variavel dele, como turma.ano nesse caso, ou turma.estudantes / turma.estudantes[0]
+
+        let turmaString = JSON.stringify(turma)
+
+        console.log(turma)
+
+        localStorage.setItem('chave' , 'valor' );
+        //localStorage.setItem('outra chave' , 'outro valor' );
+        //localStorage.setItem('outra outra chave' , 'outro outro valor' );
+
+        //Turma é um objt, ai a gnt transforma em string pra poder chamar ele no armazenamento local
+        localStorage.setItem('turma' , JSON.stringify(turma))
+
+
+        //para chamar oq ta armazenado no local storage, eu preciso transformar em objeto novamente, pq ele ta armazenado como string, e o objeto precisa ser objeto mesmo
+        let turma2 =localStorage.getItem('turma');
+
+        console.log(JSON.parse(turma2.ano));
+        
+        turma2 = JSON.parse(turma2.ano)
+
+
+    </script>
+
+
+</body>
+</html>
