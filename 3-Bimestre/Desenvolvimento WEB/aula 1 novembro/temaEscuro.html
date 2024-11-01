@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.tema-claro {
+            background-color: white;
+            color: black;
+        }
+        body.tema-escuro {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleTema">Tema claro e escuro</button>
+
+    <script>
+        // Verifica se o tema está armazenado no localStorage ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            const tema = localStorage.getItem('tema');
+            if (tema) {
+                document.body.classList.add(tema);
+            }
+        });
+
+        const botao = document.getElementById('toggleTema');
+        botao.addEventListener("click", () => {
+            if (document.body.classList.contains('tema-escuro')) {
+                document.body.classList.remove('tema-escuro');
+                document.body.classList.add('tema-claro');
+                localStorage.setItem('tema', 'tema-claro');
+            } else {
+                document.body.classList.remove('tema-claro');
+                document.body.classList.add('tema-escuro');
+                localStorage.setItem('tema', 'tema-escuro');
+            }
+        });
+    </script>
+</body>
+</html>
