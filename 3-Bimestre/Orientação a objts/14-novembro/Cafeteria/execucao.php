@@ -19,6 +19,8 @@ $escolha = 0;
             switch ($escolha) {
     
                 case 1:
+                    echo "\nVocê escolheu a opção de adicionar um produto.\n";
+
 
                 }
                 
