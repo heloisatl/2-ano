@@ -1,0 +1,50 @@
+CREATE DATABASE oi;
+USE oi;
+
+CREATE TABLE alunos (
+    idAlunos INT PRIMARY KEY,
+    nomeAlunos VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE cursos (
+    idCurso INT PRIMARY KEY,
+    nomeCurso VARCHAR(30),
+    cargaHoraria INT
+);
+
+CREATE TABLE Matriculas (
+    idAlunos INT,
+    idCurso INT,
+    FOREIGN KEY (idAlunos) REFERENCES alunos(idAlunos),
+    FOREIGN KEY (idCurso) REFERENCES cursos(idCurso)
+);
+
+INSERT INTO alunos (idAlunos, nomeAlunos, email) VALUES 
+(1, 'Guilherme Brito', 'guilherme@gmail.com'),
+(2, 'Bianca ALencar', 'bianca@gmail.com'),
+(3, 'Livia Soares', 'livia@gmail.com'),
+(4, 'Bernardo Cooper', 'bernardo@gmail.com'),
+(5, 'Teresah Alissa', 'teresa@gmail.com');
+
+INSERT INTO cursos (idCurso, nomeCurso, cargaHoraria) VALUES
+(1, 'Orientação a objetos', 48),
+(2, 'Banco de Dados', 51),
+(3, 'Desenvolvimento web', 60),
+(4, 'Algoritmos', 100),
+(5, 'Programação para web', 98);
+
+
+INSERT INTO Matriculas (idAlunos, idCurso) VALUES 
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+
+
+SELECT alunos.nomeAlunos as NomeAluno,
+cursos.nomeCurso as NomeCurso
+from alunos
+inner join cursos
+on alunos.idAlunos = cursos.idCurso;
