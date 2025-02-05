@@ -1,0 +1,71 @@
+CREATE DATABASE RestauranteLoja;
+USE RestauranteLoja;
+
+-- Tabela de Pratos
+CREATE TABLE Tabela_Pratos (
+    Numero INT PRIMARY KEY,
+    Nome VARCHAR(50),
+    Preco DECIMAL(10,2)
+);
+
+-- Tabela de Bebidas
+CREATE TABLE Tabela_Bebidas (
+    Numero INT PRIMARY KEY,
+    Nome VARCHAR(50),
+    Preco DECIMAL(10,2)
+);
+
+-- Tabela de Produtos
+CREATE TABLE Tabela_Produtos (
+    Numero INT PRIMARY KEY,
+    Nome VARCHAR(50),
+    Preco DECIMAL(10,2)
+);
+
+-- Tabela de Descontos
+CREATE TABLE Tabela_Desconto (
+    Numero INT PRIMARY KEY,
+    Percentual DECIMAL(5,2)
+);
+
+-- Inserindo Pratos
+INSERT INTO Tabela_Pratos (Numero, Nome, Preco) VALUES
+(1, 'Pizza Margherita', 25.00),
+(2, 'Hambúrguer', 20.00),
+(3, 'Lasanha', 30.00);
+
+-- Inserindo Bebidas
+INSERT INTO Tabela_Bebidas (Numero, Nome, Preco) VALUES
+(1, 'Refrigerante lata 350ml', 5.00),
+(2, 'Suco Natural 600ml', 8.00),
+(3, 'Água', 3.00);
+
+-- Inserindo Produtos da Loja
+INSERT INTO Tabela_Produtos (Numero, Nome, Preco) VALUES
+(1, 'Camiseta', 50.00),
+(2, 'Calça', 100.00),
+(3, 'Jaqueta', 150.00);
+
+-- Inserindo Descontos
+INSERT INTO Tabela_Desconto (Numero, Percentual) VALUES
+(1, 5),
+(2, 10),
+(3, 15);
+
+RESPOSTA DOS EXERCÍCIOS:
+1:
+SELECT 
+    p.Nome AS Prato, 
+    b.Nome AS Bebida, 
+    (p.Preco + b.Preco) AS Preco_Total
+FROM Tabela_Pratos p
+CROSS JOIN Tabela_Bebidas b;
+
+2:
+
+SELECT 
+    pr.Nome AS Produto, 
+    d.Percentual AS Desconto, 
+    (pr.Preco - (pr.Preco * d.Percentual / 100)) AS Preco_Com_Desconto
+FROM Tabela_Produtos pr
+CROSS JOIN Tabela_Desconto d;
