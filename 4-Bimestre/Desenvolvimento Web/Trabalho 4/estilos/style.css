@@ -4,7 +4,7 @@
 
 }
 
-/*light é nice/ regular tb/ ultra light é bom pra sidebar*/
+
 
 @font-face {
     font-family: "regular";
@@ -43,21 +43,10 @@ body {
     background-color: #FAFAFA;
 }
 
-/* Navbar */
 #container-navbar span {
     font-size: 40px;
 }
 
-
-
-/* body {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-} */
-
-
-
-/* Estilo para o menu lateral */
 .sidebar {
     min-height: 100vh;
     background: #B82132;
@@ -99,16 +88,7 @@ body {
         transform: translateX(0);
     }
 }
-/*768*/
 
-/* conf */
-
-.ops h1{
-    display:flex;
-    justify-content: center;
-    
-}
-/*login*/
 
 html, body {
     min-height: 100%; 
